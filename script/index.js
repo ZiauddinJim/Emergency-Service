@@ -64,9 +64,3 @@ const callHistory = document.getElementById('call-history');
         callHistory.appendChild(div);
     }
 }
-
-//clear call history
-document.getElementById('clear-call').addEventListener('click',()=>{
-    callHistoryData = [];
-    updateCallHistory();
-})
