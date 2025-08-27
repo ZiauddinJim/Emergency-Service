@@ -21,12 +21,12 @@
         <div class="flex justify-center items-center gap-5">
             <!-- heart -->
             <div class="flex justify-center items-center w-fit bg-green-100 py-2 px-6 rounded-full">
-                <span class="font-black">0</span>
+                <span id="heart-count" class="font-black">0</span>
                 <img class="w-7 h-7 ml-2" src="./assets/heart.png" alt="">
             </div>
             <!-- point -->
             <div class="flex justify-center items-center w-fit bg-green-100 py-2 px-6 rounded-full">
-                <span class="font-black">100</span>
+                <span id="coin-count" class="font-black">100</span>
                 <img class="w-7 h-7 ml-2" src="./assets/coin.png" alt="">
             </div>
             <!-- copy -->
@@ -38,7 +38,7 @@
     </header>
     <main>
         <!-- Banner -->
-        <section class="h-fit py-7 px-3 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center gap-3 items-center">
+        <section class="h-fit py-7 px-3 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center gap-3 items-center text-center">
             <img class="w-20 h-20 mx-auto " src="./assets/logo-dark.png" alt="Logo dark">
             <h1 class="font-bold text-4xl text-white">Emergency Service Directory</h1>
             <p class="text-white text-lg">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -46,9 +46,10 @@
         <!-- Card Box -->
         <section class="bg-[#F5FFF6] pt-12 pb-20">
             <section class="w-11/12 mx-auto grid  grid-cols-1 md:grid-cols-12 gap-5 ">
-            <!-- Card Box -->
+            
+                <!-- Card Box -->
             <section class="md:col-span-9">
-                <div class="grid place-items-center grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-7">
+                <div class="grid place-items-center grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-5">
                     <!-- Card 1 -->
                     <div class="card w-75 bg-base-100 rounded-xl shadow-md">
                         <div class="card-body">
@@ -56,9 +57,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             National Emergency Number
                             </h2>
                             <p class="text-gray-500 text-lg ">National Emergency</p>
@@ -77,9 +78,9 @@
                                 <div class="p-3 rounded-2xl bg-[#DFEFFF] w-fit">
                                 <img class="w-8 h-8" src="./assets/police.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Police Helpline Number
                             </h2>
                             <p class="text-gray-500 text-lg ">Police</p>
@@ -98,9 +99,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/fire-service.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Fire Service Number
                             </h2>
                             <p class="text-gray-500 text-lg ">Fire Service</p>
@@ -119,9 +120,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/ambulance.png" alt="ambulance">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Ambulance Service
                             </h2>
                             <p class="text-gray-500 text-lg ">Ambulance</p>
@@ -140,9 +141,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Women & Child Helpline
                             </h2>
                             <p class="text-gray-500 text-lg ">Women & Child Helpline</p>
@@ -161,9 +162,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Anti-Corruption Helpline
                             </h2>
                             <p class="text-gray-500 text-lg ">Anti-Corruption</p>
@@ -182,9 +183,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Electricity Helpline
                             </h2>
                             <p class="text-gray-500 text-lg ">Electricity Outage</p>
@@ -203,9 +204,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Brac Helpline
                             </h2>
                             <p class="text-gray-500 text-lg ">Brac</p>
@@ -224,9 +225,9 @@
                                 <div class="p-3 rounded-2xl bg-[#FFE3E2] w-fit">
                                 <img class="w-8 h-8" src="./assets/emergency.png" alt="emergency">
                                 </div>
-                                <div class="w-6 h-6"><i class="fa-regular fa-heart"></i></div>
+                                <div class="heart-btn w-6 h-6"><i class="fa-regular fa-heart"></i></div>
                             </div>
-                            <h2 class="card-title font-bold text-xl">
+                            <h2 class="card-title font-bold text-lg">
                             Bangladesh Railway Helpline
                             </h2>
                             <p class="text-gray-500 text-lg ">Bangladesh Railway</p>
@@ -240,7 +241,6 @@
                     </div>
                 </div>
             </section>
-
 
             <!-- aside -->
             <aside class="md:col-span-3 bg-white w-full p-6 rounded-lg">
@@ -261,12 +261,11 @@
                     </div>
                 </div>
             </aside>
+            
         </section>
         </section>
         
     </main>
-    <footer>
-
-    </footer>
+    <script src="./script/index.js"></script>
 </body>
 </html>
