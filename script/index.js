@@ -76,7 +76,6 @@ document.getElementById('clear-call').addEventListener('click',()=>{
 // Copy Button
 let counterCopy = 0;
 const copyButtons = document.getElementsByClassName('copy-btn');
-
 for (let button of copyButtons) {
     button.addEventListener('click', () => {
         const card = button.closest('.card');
@@ -85,10 +84,10 @@ for (let button of copyButtons) {
         document.getElementById('copy-count').textContent = counterCopy;
         navigator.clipboard.writeText(textCopy)
         .then(() => {
-            alert("Text copied to clipboard: " + textCopy);
+            alert("Number copied to clipboard: " + textCopy);
         })
         .catch(err => {
-            console.error("Failed to copy text: ", err);
+            console.error("Failed to copy Number: ", err);
         });
 });
 }
