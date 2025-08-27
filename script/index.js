@@ -18,6 +18,10 @@ const getId= (id)=>{
 // call id="call-btn"
 // id="service-name"
 // id="service-number"
+
+//call history create
+let callHistoryData =[];
+// card-box season
 document.getElementById('call-btn').addEventListener('click', ()=>{
     const coin =parseInt(getId('coin-count'));
     const serviceName =getId("service-name");
@@ -31,5 +35,38 @@ document.getElementById('call-btn').addEventListener('click', ()=>{
     }else{
         alert(`You don't have enough coins, you need at least 20 coins to make a call.`);
     }
-    
+    const data= {
+    name: `${serviceName}`,
+    Number: `${serviceNumber}`,
+    date: new Date().toLocaleTimeString()
+}
+    callHistoryData.push(data);  
+    // history submit
+    updateCallHistory();
+})
+
+// function update call history data
+const updateCallHistory = ()=>{
+const callHistory = document.getElementById('call-history');
+    callHistory.innerText = '';
+    for(const data of callHistoryData){
+        const div =document.createElement('div');
+        div.innerHTML =
+        `
+        <div class="p-4 bg-[#fafafa] flex justify-between rounded-lg mb-2">
+                            <div>
+                                <p class="text-lg font-semibold">${data.name}</p>
+                                <p class="text-gray-500">${data.Number}</p>
+                            </div>
+                            <p>${data.date}</p>
+                        </div>
+        `;
+        callHistory.appendChild(div);
+    }
+}
+
+//clear call history
+document.getElementById('clear-call').addEventListener('click',()=>{
+    callHistoryData = [];
+    updateCallHistory();
 })

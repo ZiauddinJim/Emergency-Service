@@ -245,20 +245,13 @@
             <!-- aside -->
             <aside class="md:col-span-3 bg-white w-full p-6 rounded-lg">
                 <div class="">
+                    <!--call history clear button -->
                     <div class="flex justify-between items-center mb-2">
                         <p><i class="fa-regular fa-clock"></i> <span class="text-xl font-semibold">Call History</span></p>
-                        <button class="btn bg-green-600 hover:bg-gray-300 text-white w-fit py-3 px-7 rounded-full">Clear</button>
+                        <button id="clear-call" class="btn bg-green-600 hover:bg-gray-300 text-white w-fit py-3 px-7 rounded-full">Clear</button>
                     </div>
-                    <!-- history -->
-                    <div id="history">
-                        <div class="p-4 bg-[#fafafa] flex justify-between rounded-lg mb-2">
-                            <div>
-                                <p class="text-lg font-semibold">Fire Service Number</p>
-                                <p class="text-gray-500">999</p>
-                            </div>
-                            <p>11:36:58 AM</p>
-                        </div>
-                    </div>
+                    <!-- call history -->
+                    <div id="call-history"></div>
                 </div>
             </aside>
             
