@@ -7,17 +7,12 @@ for(let button of heartButtons){
         document.getElementById('heart-count').textContent =counter;
     });
 }
+
 // Function to get id
 const getId= (id)=>{
     const getId = document.getElementById(id).textContent;
     return getId.trim();
 }
-
-// Call Feature
-// Coin id ="coin-count"
-// call id="call-btn"
-// id="service-name"
-// id="service-number"
 
 //call history create
 let callHistoryData =[];
@@ -32,8 +27,9 @@ document.getElementById('call-btn').addEventListener('click', ()=>{
         alert(`Calling ${serviceName} ${serviceNumber}...`);
         const min = coin - digit;
         coinElement.textContent= min;
+        
     }else{
-        alert(`You don't have enough coins, you need at least 20 coins to make a call.`);
+        return alert(`You don't have enough coins, you need at least 20 coins to make a call.`);
     }
     const data= {
     name: `${serviceName}`,
@@ -54,12 +50,12 @@ const callHistory = document.getElementById('call-history');
         div.innerHTML =
         `
         <div class="p-4 bg-[#fafafa] flex justify-between rounded-lg mb-2">
-                            <div>
-                                <p class="text-lg font-semibold">${data.name}</p>
-                                <p class="text-gray-500">${data.Number}</p>
-                            </div>
-                            <p>${data.date}</p>
-                        </div>
+            <div>
+                <p class="text-lg font-semibold">${data.name}</p>
+                <p class="text-gray-500">${data.Number}</p>
+            </div>
+            <p>${data.date}</p>
+        </div>
         `;
         callHistory.appendChild(div);
     }
